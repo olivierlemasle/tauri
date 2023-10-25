@@ -15,7 +15,6 @@ use serde::Serialize;
 use tauri::{ipc::Channel, window::WindowBuilder, App, AppHandle, RunEvent, Runtime, WindowUrl};
 use tauri_plugin_sample::{PingRequest, SampleExt};
 
-#[cfg(desktop)]
 use tauri::Manager;
 
 pub type SetupHook = Box<dyn FnOnce(&mut App) -> Result<(), Box<dyn std::error::Error>> + Send>;
